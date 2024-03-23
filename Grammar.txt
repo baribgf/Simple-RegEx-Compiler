@@ -1,0 +1,30 @@
+-----------------
+# RegEx Grammar #
+-----------------
+
+STMNT   -> P STMNT'
+
+STMNT'  -> STMNT
+        | e
+
+P       -> char P'
+        | [ R' ] P'
+        | . P'
+
+P'      -> IND
+        | R
+
+IND     -> *
+        | +
+        | ?
+
+R       -> char R
+        | [ R' ] R
+        | . R
+        | IND
+        | e
+
+R'      -> char R''
+
+R''     -> char R''
+        | e
